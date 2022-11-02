@@ -1,0 +1,677 @@
+@font-face{
+    font-family: 'font_logo';
+    src: url("../fonts/MonteCarlo-Regular.ttf") format("TrueType");
+}
+@font-face{
+    font-family: 'lato';
+    src: url('../fonts/Lato-Regular.ttf') format('TrueType');
+}
+body {
+    margin:0;
+    padding:0;
+    font-family: 'lato', sans-serif;
+    line-height: 1.2;
+}
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+/************************** Header of site **************************/
+header {
+    width : 100%;
+    background-image: url("../img/blog_background.jpg");
+    height: 100px;
+    display : flex;
+    align-items: center;
+}
+
+header .logo{
+    margin-left : 20%;
+    margin-bottom: 5px;  
+}
+header .logo a{
+    font-family: 'font_logo', sans-serif;
+    background: linear-gradient(to right, rgb(2, 2, 167) 0%, rgb(126, 2, 126) 100%);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-weight: 600;
+    font-size: 3rem;
+    padding : 5px 10px;
+    letter-spacing: 3px;
+}
+header .sign {
+    margin : 0 1%;
+    font-size : 1.3rem;
+    font-weight: 600;
+    color : rgb(5, 5, 211);
+}
+
+header .sign a {
+    font-size : 1.3rem;
+    font-weight: 600;
+    color : rgb(5, 5, 211);
+}
+header .user {
+    margin-left : auto;
+    font-weight : 600;
+}
+header .signup {
+    margin-right : 2%;
+    
+}
+
+/************************** Main of site **************************/
+main {
+    width: 100%;
+    display : flex;
+}
+.nofound {
+    color : black;
+    font-size: 2rem;
+    text-align: center;
+    margin: 30vh auto;
+}
+     /********************* Screen for articles for Home Page ******************/
+.article_container {
+    width: 75%;
+    padding : 2% 4% 1% 4%;
+}
+
+        /******************* Articles header : containing Search , Filter for Home Page ****************/
+.article_container .article_bar {
+    width : 100%;
+    display : flex;
+    justify-content : space-between;
+    align-items: center;
+    margin: 1% 0 4% 0;
+}
+.article_container .title {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+.article_container .search {
+    width : 40%;
+    display: flex;
+    justify-content: center;
+    border : 1px solid black;
+    border-radius: 30px;
+}
+.article_container .search input {
+    width : 90%;
+    font-size: 1rem;
+    padding : 10px;
+    border : 1px solid transparent;
+    border-radius: inherit;
+}
+.article_container .search:focus input {
+   background-color: white;
+}
+.article_container .search button {
+    width : 50px;
+    border : none;
+    background-color: white;
+    border-radius: inherit;
+    cursor: pointer;
+}
+.article_container .search img {
+    width : 80%;
+    height : 80%;
+    margin-top : 10%;
+}
+.article_container .filter {
+    width : 20%;
+    display: flex;
+    justify-content: flex-end;
+}
+.article_container .filter img {
+    width : 30px;
+}
+.article_container .filter select {
+    font-size: 1rem;
+    border:none;
+    border-bottom: 2px solid black;
+    cursor: pointer;
+}
+
+        /******************* Latest article for Home Page ****************/
+.first_article {
+    width : 100%;
+    display : flex;
+    justify-content : space-between;
+    margin-bottom : 30px;
+}
+.first_article a {
+    width : 45%;
+    height : 200px;
+    flex-shrink : 0;
+}
+.first_article a img {
+    width : 100%;
+    height : 100%;
+    object-fit : cover;
+    flex-shrink : 0;
+}
+.first_article_content {
+    width : 50%;
+    display : flex;
+    flex-direction : column;
+}
+.first_article_info {
+    font-size : 1rem;
+    color: #696969;
+}
+.first_article_title {
+    margin : 10px 0;
+}
+.first_article_title a {
+    color :rgb(5, 5, 211);
+    font-size : 1.5rem;
+    font-weight : 600;
+    line-height: 1.2;
+}
+.first_article_description{
+    font-size : 1.1rem;
+    text-align: justify;
+}
+        /******************* Recent articles for Post page ****************/
+.articles {
+    --spacing: 20px;
+    --column: 4;
+    width : calc(100% + var(--spacing));  /* il faut ajouter --spacing to recompenser le côté droite suite au margin-left négatif*/
+    display : flex;
+    margin-left: calc(-1 * var(--spacing));
+    flex-wrap: wrap;
+}
+.article {
+    display : flex;
+    flex-direction : column;
+    width: calc(100% / var(--column) - var(--spacing));
+    margin-left: var(--spacing);
+    margin-bottom: 30px;
+}
+.article a {
+    width : 100%;
+    height : 150px;
+    margin-bottom : 5px;
+}
+.article a img {
+    width : 100%;
+    height : 100%;
+    object-fit : cover;
+    flex-shrink : 0;
+}
+.article_info{
+    font-size : 0.8rem;
+    color: #696969;
+}
+.article_title{
+    font-size : 1.1rem;
+    font-weight : 600;
+    height : 60px;
+    margin : 10px 0;
+    text-transform: uppercase;
+}
+.article_title a {
+    color :rgb(5, 5, 211);
+}
+.article_description{
+    font-size : 1rem;
+    text-align: justify;
+}
+
+    /************************** Post article for Post page ************************/
+.post_container {
+    width : 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.post_bar {
+    width : 100%;
+    padding : 20px 0;
+    display: flex;
+    justify-content: flex-end;
+}
+.post_bar .Post {
+    width : 15%;
+    display: flex;
+    justify-content: flex-start;
+}
+.post_bar .Post img {
+    width : 30px;
+}
+.post_bar .Post a {
+    font-size: 1rem;
+    color : black;
+    font-weight: 600;
+    padding-top: 4px;
+}
+.post_container img {
+    width : 100%;
+    height : 100vh;
+    flex-shrink: 0;
+    object-fit: cover;
+}
+.article_main {
+    width : 90%;
+    margin-top : -10%;
+    display: flex;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    justify-content: space-between;
+}
+.post_article {
+    width: 68%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 20px;
+}
+.post_article_info {
+    width: 100%;
+    margin: 15px 0;
+    text-align: end;
+    color: #696969;
+}
+.post_article_title {
+    font-size: 1.5rem;
+    line-height: 1.5;
+    color :rgb(5, 5, 211);
+    height : auto;
+    text-align: center;
+}
+.recent_articles {
+    width: 28%;
+    padding: 0 10px;
+}
+.recent_article {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+.recent_article_title {
+    text-align: center;
+    color : black;
+    font-size: 1rem;
+    margin: 20px 0;
+    font-weight: 600;
+}
+.recent_article a {
+    width: 30%;
+    height : 85px;
+}
+.recent_article a img {
+    width: 100%;
+    height : 100%;
+    object-fit: cover;
+}
+
+    /************************** Pagination for Home Page ************************/
+.article_container ul {
+    list-style : none;
+    display : flex;
+    justify-content : flex-end;
+    margin : 0;
+}
+.article_container ul li {
+   font-size : 1rem;
+   margin : 0 10px;
+}
+.pagination a {
+    color : black;
+}
+    /******************* Articles header for User Home Page ****************/
+.user_article_container {
+    width: 100%;
+}
+.user_article_bar {
+   margin: 1% 0 1% 0;
+}
+.article_container .addPost, .calendar {
+    width : 20%;
+    display: flex;
+    justify-content: flex-start;
+}
+.article_container .addPost img, .calendar img {
+    width : 30px;
+}
+.article_container .addPost a, .calendar a {
+    font-size: 1rem;
+    color : black;
+    font-weight: 600;
+    padding-top: 4px;
+}
+.user_article_container .search {
+    width : 30%;
+}
+/*
+.user_articles {
+    --column: 4;
+} */
+
+    /********************** Right Navbar for Most Viewed (all users) ********************/
+.bar_hotNews {
+    width: 25%;
+    margin-top: 2.5%;
+}
+.hot_article {
+    width : 100%;
+    display : flex;
+    justify-content: space-between;
+    margin : 7% 0;
+}
+.hot_article a {
+    width: 30%;
+    height : 80px;
+    flex-shrink : 0;
+}
+.hot_article a img {
+    width: 100%;
+    height : 100%;
+    object-fit : cover;
+    flex-shrink : 0;
+}
+.hot_article_content {
+    width: 65%;
+    display : flex;
+    flex-direction : column;
+}
+.hot_article_title {
+    flex : 1;
+}
+.hot_article_title a {
+    color : rgb(5, 5, 211);
+    font-size : 0.8rem;
+    font-weight : 600;
+}
+
+.hot_article_info {
+    padding-top: 5px;
+    font-size : 0.6rem;
+    color: #696969;
+}
+
+/************************** Footer of site **************************/
+footer {
+    width : 100%;
+    height : 50px;
+    text-align: center;
+    background-image: url("../img/blog_background.jpg");
+    padding: 20px 0;
+}
+.main_footer{
+    width : 100%;
+    display: flex;
+    justify-content: center;
+}
+.main_footer a {
+    color : rgb(5, 5, 211);
+    font-size: 1.3rem;
+    text-align: center;
+    margin : 0px 15px 10px 15px;
+}
+.main_footer a:hover {
+   text-decoration: underline;
+}
+.copyright {
+    margin : 5px auto;
+    font-size: 0.8rem;
+    color: black;
+}
+/************************** Sign-in and Sign-up pages **************************/
+.signin-form {
+    display: flex;
+    justify-content: center;
+    margin-top : 30px;
+}
+.signin-title {
+    text-align: center;
+    margin: 20px 0 5px 0;
+    font-size: 1.5rem;
+}
+.signin-field {
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding-top: 15px;
+}
+.signin-input {
+    font-size: 1rem;
+    padding: 10px;
+    width : 300px;
+    border : 1px solid grey;
+    border-radius: 5px;
+}
+.signin-submit {
+    width : 100%;
+    color : white;
+    font-size:1.2rem;
+    margin : 30px 0 0 0;
+    background-color: rgb(0, 140, 255);
+    border : 1px solid rgb(2, 114, 206);
+    border-radius: 5px;
+    padding: 10px;
+}
+.signin-message {
+    font-weight : 600;
+    margin : 20px 0;
+}
+.signup-error {
+    color : red;
+    font-size: 1rem;
+    font-style: italic;
+}
+.signup-reset{
+    margin : 10px 0 0 0;
+}
+
+/************************* Responsive for site ***********************/
+@media screen and (min-width: 1024px) and (max-width: 1279px) {
+    .articles {
+        --column: 4;
+    }
+    .first_article_title a{
+        font-size : 1.4rem;
+    }
+    .article_description {
+        margin-top: 15px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    header .logo a {
+        font-size: 2.7rem;
+    }
+    header .sign a, .main_footer a {
+        font-size : 1.15rem;
+    }
+    footer{
+        height : 43px;
+    }
+    .copyright {
+        font-size : 0.73rem;
+    }
+    .articles {
+        --column: 3;
+    }
+    .first_article_info {
+        font-size : 0.9rem;
+    }
+    .article_description {
+        font-size : 0.9rem;
+        margin-top: 10px;
+    }
+    
+    .first_article_title a{
+        font-size : 1.3rem;
+    }
+    .first_article_description{
+        font-size : 1rem;
+    }
+    .article_title a {
+        font-size : 1.05rem; 
+        height : 60px;
+    }
+    .hot_article a, .recent_article a {
+        width: 40%;
+    }
+    .hot_article_content {
+        width: 55%;
+    }
+    .hot_article_title a {
+        font-size : 0.7rem;
+    }
+    .hot_article_info {
+        font-size : 0.6rem;
+    }
+}
+
+@media screen and (min-width: 480px) and (max-width: 767px) {
+    nav, .recent_articles {
+        display : none;
+    }
+    .post_article {
+        width: 100%;
+    }
+    header{
+        height:90px;
+    }
+    header .logo {
+        margin-left : 14%;
+    }
+    header .logo a {
+        font-size: 2.5rem;
+    }
+    header .sign a, .main_footer a, .article_container .title {
+        font-size : 1rem;
+    }
+    footer{
+        height : 36px;
+    }
+    .copyright {
+        font-size : 0.66rem;
+    }
+    .article_container .search img {
+        width : 70%;
+    }
+    .article_container .filter img {
+        width : 23px;
+    }
+    .article_container .filter select {
+        font-size: 0.93rem;
+    }
+    .article_container{
+        width : 92%;
+    }
+    .article_container .search input {
+        font-size : 0.9rem;
+        padding : 7px;
+    }
+    .articles {
+        --column: 2;
+    }
+    .first_article_info, .article_info {
+        font-size : 0.7rem;
+    }
+    .first_article_title a {
+        font-size : 1.2rem;
+    }
+    .first_article_description, .article_description{
+        font-size : 0.8rem;
+    }
+    .article_title {
+        margin : 8px 0;
+        height : 50px;
+    }
+    .article_title a {
+        font-size : 0.9rem;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 479px) {
+    nav, .recent_articles{
+        display : none;
+    }
+    .post_article {
+        width: 100%;
+    }
+    header{
+        height:80px;
+    }
+    header .logo {
+        margin-left : 10%;
+    }
+    header .logo a {
+        font-size: 2rem;
+    }
+    header .sign a {
+        font-size : 0.8rem;
+    }
+    footer{
+        height : 30px;
+    }
+    .main_footer a{
+        font-size : 0.8rem;
+        margin-left : 5px;
+        margin-right: 5px;
+    }
+    .copyright {
+        font-size : 0.55rem;
+    }
+    .article_container .title {
+        font-size : 0.8rem;
+    }
+    .article_container .search input {
+        font-size : 0.8rem;
+        padding : 5px;
+    }
+    .article_container .filter img {
+        width : 18px;
+    }
+    .article_container .filter select {
+        font-size: 0.75rem;
+    }
+    .article_container{
+        width : 92%;
+    }
+    .articles{
+        --column: 1;
+        --spacing : 0px;
+        width: 100%;
+    }
+    .first_article {
+        flex-direction: column;
+        align-items : center;
+        margin-bottom : 30px;
+    }
+    .first_article a {
+        width : 100%;
+        height : 150px;
+    }
+    .first_article_content {
+        width : 100%;
+        margin-top: 5px;
+    }
+    .first_article_info, .article_info {
+        font-size : 0.7rem;
+    }
+    .first_article_title, .article_title {
+        margin : 6px 0;
+        height : auto;
+    }
+    .first_article_title a, .article_title a {
+        font-size : 0.9rem;
+    }
+    .first_article_description, .article_description {
+        font-size : 0.8rem;
+    }
+    .signin-input {
+        width : 260px;
+}
+
+@media screen and (max-width: 319px) {
+    * {
+        visibility : hidden;
+    }
+}
